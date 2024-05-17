@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Simple Sales Web App</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Amazing Product</h1>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="product-description">
+        <h2>Why Our Product Is The Best</h2>
+        <p>This amazing product helps you solve problems you didn't know you had in ways you can't understand. Buy it now!</p>
+        <button id="buyNowBtn">Buy Now</button>
+    </section>
+    <aside class="testimonials">
+        <h3>Customer Testimonials</h3>
+        <p>"This product changed my life!" - Happy Customer</p>
+    </aside>
+</main>
+
+<footer>
+    <p>&copy; 2023 Amazing Product</p>
+</footer>
+
+<div id="orderModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Confirm Your Order</h2>
+        <p>Would you like to place an order for this product?</p>
+        <button id="confirmBtn">Yes</button>
+        <button id="cancelBtn">No</button>
+    </div>
+</div>
+
+<script>
+// JavaScript for handling the modal window
+var modal = document.getElementById("orderModal");
+var btn = document.getElementById("buyNowBtn");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() { modal.style.display = "block"; }
+span.onclick = function() { modal.style.display = "none"; }
+window.onclick = function(event) { if (event.target == modal) { modal.style.display = "none"; }}
+</script>
+
+</body>
+</html>
