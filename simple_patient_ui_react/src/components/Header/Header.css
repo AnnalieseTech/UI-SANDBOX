@@ -1,0 +1,29 @@
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 1.25em;
+  text-align: center;
+}
+
+nav ul {
+  padding: 0;
+  /*     list-style: none; */
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 1.25em;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+/* icon image */
+img.icon {
+  max-width: 2%;
+  max-height: 2%;
+  filter: brightness(0) invert(1);
+  content: url(../../img/medical.png);
+}

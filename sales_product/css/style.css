@@ -1,0 +1,98 @@
+body {
+    font-family: Times new roman, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 1.25em;
+    text-align: center;
+}
+
+nav ul {
+    padding: 0;
+/*     list-style: none; */
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1.25em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.product-description, .testimonials {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Modal Window */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/*working only in ipad portrait device*/
+@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+  body{
+    background: red;
+  }  
+}
+
+@media only screen and (max-width: 600px) {
+    /* Styles for mobile phones */
+    body {
+        background-color: orange;
+    }
+}
+
+ 

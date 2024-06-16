@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patient Management System: Patients</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1><img class="icon" src="img/medical.png"> Patient Management</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="patients.html">Patients</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="contactus-form-container">
+            <form id="contactus-form" action="/contactus.php">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <option value="usa">USA</option>
+                    <option value="canada">Canada</option>
+                </select>
+
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                <input type="submit" value="Submit" id="submit-form">
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Amazing Patient Management System</p>
+    </footer>
+
+    <script>
+        function getFormData() {
+            // Get a reference to the form element.
+            var form = document.getElementById("contactus-form");
+
+            // Get a reference to each of the input fields in the form.
+            var firstNameInput = document.getElementById("fname");
+            var lastNameInput = document.getElementById("lname");
+            var countryInput = document.getElementById("country");
+            var subjectInput = document.getElementById("subject");
+
+            // Get the value of each input field.
+            var firstName = firstNameInput.value;
+            var lastName = lastNameInput.value;
+            var country = countryInput.value;
+            var subject = subjectInput.value;
+
+
+            // Store the form data in a JavaScript object.
+            var formData = {
+                firstName: firstName,
+                lastName: firstName,
+                country: country,
+                subject: subject
+            };
+
+            return formData;
+        }
+        var submitBtn = document.getElementById("submit-form");
+        submitBtn.addEventListener("click", submitForm, false);
+
+        function submitForm(event) {
+            event.preventDefault();
+            alert(JSON.stringify(getFormData()));
+        }
+
+    </script>
+
+</body>
+
+</html>

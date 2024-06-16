@@ -1,0 +1,30 @@
+/* HeroImage.css */
+.hero-image {
+  position: relative;
+  height: 40vh; /* 60% of the viewport height */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-image: url(../../img/hero-image.jpg);
+}
+
+.hero-text {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  padding: 2em;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .hero-image {
+    height: 20vh; /* Shorter height on small devices */
+  }
+
+  .hero-text {
+    padding: 1em;
+  }
+}
